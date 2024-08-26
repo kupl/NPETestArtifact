@@ -1,0 +1,47 @@
+{
+  "npe_info": [
+    {
+      "module": "ugs-core",
+      "npe_class": "com.willwinder.universalgcodesender.GrblController",
+      "line": 202
+    },
+    {
+      "module": "ugs-core",
+      "npe_class": "com.willwinder.universalgcodesender.GrblController",
+      "line": 209
+    }
+  ],
+  "build_info": {
+    "java_version": 8,
+    "mvn_opt_extra": ""
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae install -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -DincludeScope=compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "ugs-core",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      }
+    ],
+    "replay_npe": "mvn -V -pl ugs-core test -Dtest='GrblControllerTest#testResumeStreaming,GrblControllerTest#testPauseStreaming' -DtrimStackTrace=false"
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "ugs-core",
+        "class_name": "com.willwinder.universalgcodesender.GrblController"
+      },
+      {
+        "module": "ugs-core",
+        "class_name": "com.willwinder.universalgcodesender.AbstractController"
+      }
+    ]
+  }
+}

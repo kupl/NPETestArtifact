@@ -1,0 +1,38 @@
+{
+  "npe_info": [
+    {
+      "module": "core",
+      "npe_class": "com.graphhopper.routing.util.DataFlagEncoder",
+      "line": 438
+    }
+  ],
+  "build_info": {
+    "java_version": 8,
+    "mvn_opt_extra": ""
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae install -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -DincludeScope=compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "core",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      }
+    ],
+    "replay_npe": "mvn -V -pl core test -Dtest='DataFlagEncoderTest#testSpatialId' -DtrimStackTrace=false"
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "core",
+        "class_name": "com.graphhopper.routing.util.DataFlagEncoder"
+      }
+    ]
+  }
+}

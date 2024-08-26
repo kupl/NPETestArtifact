@@ -1,0 +1,44 @@
+{
+  "npe_info": [
+    {
+      "module": "sdk",
+      "npe_class": "com.google.cloud.dataflow.sdk.transforms.join.CoGbkResult",
+      "line": 320
+    }
+  ],
+  "build_info": {
+    "java_version": 8,
+    "mvn_opt_extra": ""
+  },
+  "test_info": {
+    "module": "sdk",
+    "test_class": "com.google.cloud.dataflow.sdk.transforms.join.CoGroupByKeyTest",
+    "test_method": "testCoGroupByKeyGetOnly"
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae install -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -DincludeScope=compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip"
+      },
+      {
+        "cwd": "sdk",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip"
+      }
+    ],
+    "replay_npe": "mvn -pl sdk test -Dtest=CoGroupByKeyTest#testCoGroupByKeyGetOnly -DtrimStackTrace=false -DfailIfNoTests=false",
+    "replay_manual_npe": "mvn -pl sdk -P manual-npetest test -Dtest='*ManNPETest' -DtrimStackTrace=false -DfailIfNoTests=false -Dcheckstyle.skip"
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "sdk",
+        "class_name": "com.google.cloud.dataflow.sdk.transforms.join.CoGbkResult"
+      }
+    ]
+  }
+}

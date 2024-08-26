@@ -1,0 +1,48 @@
+{
+  "npe_info": [
+    {
+      "module": "httpclient5",
+      "npe_class": "org.apache.hc.client5.http.impl.classic.MinimalHttpClient",
+      "line": 145
+    }
+  ],
+  "build_info": {
+    "java_version": 15,
+    "mvn_opt_extra": ""
+  },
+  "test_info": {
+    "module": "httpclient5-testing",
+    "test_class": "org.apache.hc.client5.testing.sync.TestMinimalClientRequestExecution",
+    "test_method": "testNonCompliantURIWithoutContext"
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae install -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -DincludeScope=compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "httpclient5",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      }
+    ],
+    "replay_npe": "mvn -V -pl httpclient5-testing test -Dtest=TestMinimalClientRequestExecution#testNonCompliantURIWithoutContext -DtrimStackTrace=false -DfailIfNoTests=false -Danimal.sniffer.skip",
+    "replay_manual_npe": ""
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "httpclient5",
+        "class_name": "org.apache.hc.client5.http.impl.classic.MinimalHttpClient"
+      },
+      {
+        "module": "httpclient5",
+        "class_name": "org.apache.hc.client5.http.impl.classic.CloseableHttpClient"
+      }
+    ]
+  }
+}

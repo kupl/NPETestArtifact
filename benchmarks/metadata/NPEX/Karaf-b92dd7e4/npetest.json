@@ -1,0 +1,44 @@
+{
+  "npe_info": [
+    {
+      "module": "shell/core",
+      "npe_class": "org.apache.karaf.shell.impl.console.commands.help.wikidoc.WikiParser",
+      "line": 103
+    }
+  ],
+  "build_info": {
+    "java_version": 8,
+    "mvn_opt_extra": ""
+  },
+  "test_info": {
+    "module": "shell/core",
+    "test_class": "org.apache.karaf.shell.impl.console.commands.help.wikidoc.WikiParserTest",
+    "test_method": "parseTestDoc"
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae install -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -DincludeScope=compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "shell/core",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      }
+    ],
+    "replay_npe": "mvn -V -pl shell/core test -Dtest=WikiParserTest#parseTestDoc -DtrimStackTrace=false -DfailIfNoTests=false",
+    "replay_manual_npe": "mvn -V -pl shell/core -P manual-npetest test -Dtest='*ManNPETest' -DtrimStackTrace=false -DfailIfNoTests=false"
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "shell/core",
+        "class_name": "org.apache.karaf.shell.impl.console.commands.help.wikidoc.WikiParser"
+      }
+    ]
+  }
+}

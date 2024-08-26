@@ -1,0 +1,54 @@
+{
+  "npe_info": [
+    {
+      "module": "",
+      "npe_class": "fayder.restcountries.v1.rest.CountryService",
+      "line": 49
+    },
+    {
+      "module": "",
+      "npe_class": "fayder.restcountries.v1.rest.CountryService",
+      "line": 56
+    },
+    {
+      "module": "",
+      "npe_class": "fayder.restcountries.v1.rest.CountryService",
+      "line": 83
+    },
+    {
+      "module": "",
+      "npe_class": "fayder.restcountries.v1.rest.CountryService",
+      "line": 143
+    },
+    {
+      "module": "",
+      "npe_class": "fayder.restcountries.v1.rest.CountryService",
+      "line": 185
+    }
+  ],
+  "build_info": {
+    "java_version": 8,
+    "mvn_opt_extra": ""
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      }
+    ],
+    "replay_npe": "mvn -V test -Dtest='fayder.restcountries.v1.CountryServiceTest#getBy*' -DtrimStackTrace=false"
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "",
+        "class_name": "fayder.restcountries.v1.rest.CountryService"
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "npe_info": [
+    {
+      "module": "fop-core",
+      "npe_class": "org.apache.fop.fonts.SingleByteFont",
+      "line": 138
+    }
+  ],
+  "build_info": {
+    "java_version": 8,
+    "mvn_opt_extra": "-Dmaven.antrun.skip"
+  },
+  "test_info": {
+    "module": "fop-core",
+    "test_class": "org.apache.fop.fonts.type1.Type1FontLoaderTestCase",
+    "test_method": "testBoundingBox"
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae install -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests -Dmaven.antrun.skip"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -DincludeScope=compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests -Dmaven.antrun.skip"
+      },
+      {
+        "cwd": "fop-core",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests -Dmaven.antrun.skip"
+      }
+    ],
+    "replay_npe": "mvn -V -pl fop-core test -Dtest=Type1FontLoaderTestCase#testBoundingBox -DtrimStackTrace=false -DfailIfNoTests=false",
+    "replay_manual_npe": "mvn -V -pl fop-core -P manual-npetest test -Dtest='*ManNPETest' -DtrimStackTrace=false -DfailIfNoTests=false"
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "fop-core",
+        "class_name": "org.apache.fop.fonts.SingleByteFont"
+      }
+    ]
+  }
+}

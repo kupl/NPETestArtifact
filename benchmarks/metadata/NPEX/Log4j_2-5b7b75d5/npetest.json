@@ -1,0 +1,48 @@
+{
+  "npe_info": [
+    {
+      "module": "log4j-core",
+      "npe_class": "org.apache.logging.log4j.core.config.composite.DefaultMergeStrategy",
+      "line": 269
+    }
+  ],
+  "build_info": {
+    "java_version": 8,
+    "mvn_opt_extra": ""
+  },
+  "test_info": {
+    "module": "log4j-core",
+    "test_class": "org.apache.logging.log4j.core.config.CompositeConfigurationTest",
+    "test_method": "testAttributeCheckWhenMergingConfigurations"
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae install -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -DincludeScope=compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "log4j-core",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      }
+    ],
+    "replay_npe": "mvn -V -pl log4j-core test -Dtest=CompositeConfigurationTest#testAttributeCheckWhenMergingConfigurations -DtrimStackTrace=false -DfailIfNoTests=false",
+    "replay_manual_npe": ""
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "log4j-core",
+        "class_name": "org.apache.logging.log4j.core.config.composite.DefaultMergeStrategy"
+      },
+      {
+        "module": "log4j-core",
+        "class_name": "org.apache.logging.log4j.core.config.Configurator"
+      }
+    ]
+  }
+}

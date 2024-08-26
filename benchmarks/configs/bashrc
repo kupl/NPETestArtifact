@@ -1,0 +1,3 @@
+
+# Prompt1
+PS1="\[\e]0;\u@npetest_eval: \w\a\]${debian_chroot:+($debian_chroot)}\u@npetest_eval:\w\$ "

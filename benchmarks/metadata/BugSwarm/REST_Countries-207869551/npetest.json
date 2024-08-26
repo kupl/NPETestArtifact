@@ -1,0 +1,38 @@
+{
+  "npe_info": [
+    {
+      "module": "",
+      "npe_class": "fayder.restcountries.rest.CountryServiceHelper",
+      "line": 75
+    }
+  ],
+  "build_info": {
+    "java_version": 8,
+    "mvn_opt_extra": ""
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      }
+    ],
+    "replay_npe": "mvn -V test -Dtest='fayder.restcountries.v2.CountryServiceTest#getByCapital' -DtrimStackTrace=false"
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "",
+        "class_name": "fayder.restcountries.rest.CountryServiceHelper"
+      },
+      {
+        "module": "",
+        "class_name": "fayder.restcountries.v2.rest.CountryService"
+      }
+    ]
+  }
+}

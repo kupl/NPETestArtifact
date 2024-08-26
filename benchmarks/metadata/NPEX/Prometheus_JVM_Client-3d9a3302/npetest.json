@@ -1,0 +1,44 @@
+{
+  "npe_info": [
+    {
+      "module": "simpleclient",
+      "npe_class": "io.prometheus.client.CollectorRegistry",
+      "line": 148
+    }
+  ],
+  "build_info": {
+    "java_version": 8,
+    "mvn_opt_extra": ""
+  },
+  "test_info": {
+    "module": "simpleclient_spring_boot",
+    "test_class": "io.prometheus.client.spring.boot.PrometheusMvcEndpointTest",
+    "test_method": "testNameParamIsNull"
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae install -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -DincludeScope=compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "simpleclient",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      }
+    ],
+    "replay_npe": "mvn -V -pl simpleclient_spring_boot -am test -Dtest=PrometheusMvcEndpointTest#testNameParamIsNull -DtrimStackTrace=false -DfailIfNoTests=false",
+    "replay_manual_npe": "mvn -V -pl simpleclient_spring_boot -am -P manual-npetest test -Dtest='*ManNPETest' -DtrimStackTrace=false -DfailIfNoTests=false"
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "simpleclient",
+        "class_name": "io.prometheus.client.CollectorRegistry"
+      }
+    ]
+  }
+}

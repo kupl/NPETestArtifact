@@ -1,0 +1,52 @@
+{
+  "npe_info": [
+    {
+      "module": "okhttp",
+      "npe_class": "com.squareup.okhttp.internal.http.StreamAllocation",
+      "line": 189
+    },
+    {
+      "module": "okhttp",
+      "npe_class": "com.squareup.okhttp.internal.http.StreamAllocation",
+      "line": 198
+    }
+  ],
+  "build_info": {
+    "java_version": 8,
+    "mvn_opt_extra": ""
+  },
+  "test_info": {
+    "module": "okhttp-urlconnection",
+    "test_class": "com.squareup.okhttp.OkUrlFactoryTest",
+    "test_method": "noneResponseSourceHeaders"
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae install -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -DincludeScope=compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "okhttp",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      }
+    ],
+    "replay_npe": "mvn -V -pl okhttp-urlconnection test -Dtest='OkUrlFactoryTest#noneResponseSourceHeaders,UrlConnectionCacheTest#serverDisconnectsPrematurelyWithContentLengthHeader' -DtrimStackTrace=false"
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "okhttp",
+        "class_name": "com.squareup.okhttp.internal.http.StreamAllocation"
+      },
+      {
+        "module": "okhttp-urlconnection",
+        "class_name": "com.squareup.okhttp.internal.huc.HttpURLConnectionImpl"
+      }
+    ]
+  }
+}

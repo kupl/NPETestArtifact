@@ -1,0 +1,48 @@
+{
+  "npe_info": [
+    {
+      "module": "rt/frontend/jaxrs",
+      "npe_class": "org.apache.cxf.jaxrs.utils.JAXRSUtils",
+      "line": 1328
+    }
+  ],
+  "build_info": {
+    "java_version": 15,
+    "mvn_opt_extra": ""
+  },
+  "test_info": {
+    "module": "rt/frontend/jaxrs",
+    "test_class": "org.apache.cxf.jaxrs.impl.UriInfoImplTest",
+    "test_method": "testGetQueryParameters"
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae install -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -DincludeScope=compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "rt/frontend/jaxrs",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      }
+    ],
+    "replay_npe": "mvn -V -pl rt/frontend/jaxrs/ test -Dtest=UriInfoImplTest#testGetQueryParameters -DtrimStackTrace=false",
+    "replay_manual_npe": "mvn -pl rt/frontend/jaxrs -P manual-npetest test -Dtest='*ManNPETest' -DtrimStackTrace=false -DfailIfNoTests=false -Dcheckstyle.skip -Drat.skip"
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "rt/frontend/jaxrs",
+        "class_name": "org.apache.cxf.jaxrs.utils.JAXRSUtils"
+      },
+      {
+        "module": "rt/frontend/jaxrs",
+        "class_name": "org.apache.cxf.jaxrs.impl.UriInfoImpl"
+      }
+    ]
+  }
+}

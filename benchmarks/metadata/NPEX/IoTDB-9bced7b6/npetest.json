@@ -1,0 +1,48 @@
+{
+  "npe_info": [
+    {
+      "module": "server",
+      "npe_class": "org.apache.iotdb.db.metadata.MTree",
+      "line": 1136
+    }
+  ],
+  "build_info": {
+    "java_version": 8,
+    "mvn_opt_extra": "-Dremoteresources.skip"
+  },
+  "test_info": {
+    "module": "server",
+    "test_class": "org.apache.iotdb.db.metadata.MManagerBasicTest",
+    "test_method": "testGetChildNodePathInNextLevel"
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae install -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests -Dremoteresources.skip"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -DincludeScope=compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests -Dremoteresources.skip"
+      },
+      {
+        "cwd": "server",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests -Dremoteresources.skip"
+      }
+    ],
+    "replay_npe": "mvn -V -pl server test -Dtest='MManagerBasicTest#testGetChildNodePathInNextLevel' -DtrimStackTrace=false -DfailIfNoTests=false",
+    "replay_manual_npe": "mvn -V -pl server -P manual-npetest test -Dtest='*ManNPETest' -DtrimStackTrace=false -DfailIfNoTests=false"
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "server",
+        "class_name": "org.apache.iotdb.db.metadata.MTree"
+      },
+      {
+        "module": "server",
+        "class_name": "org.apache.iotdb.db.metadata.MManager"
+      }
+    ]
+  }
+}

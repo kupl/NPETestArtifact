@@ -1,0 +1,63 @@
+{
+  "npe_info": [
+    {
+      "module": "httpclient5",
+      "npe_class": "org.apache.hc.client5.http.impl.async.H2AsyncClientBuilder",
+      "line": 341
+    },
+    {
+      "module": "httpclient5",
+      "npe_class": "org.apache.hc.client5.http.impl.async.H2AsyncClientBuilder",
+      "line": 351
+    },
+    {
+      "module": "httpclient5",
+      "npe_class": "org.apache.hc.client5.http.impl.async.HttpAsyncClientBuilder",
+      "line": 448
+    },
+    {
+      "module": "httpclient5",
+      "npe_class": "org.apache.hc.client5.http.impl.async.HttpAsyncClientBuilder",
+      "line": 458
+    }
+  ],
+  "build_info": {
+    "java_version": 15,
+    "mvn_opt_extra": ""
+  },
+  "test_info": {
+    "module": "httpclient5",
+    "test_class": "org.apache.hc.client5.http.impl.classic.TestHttpAsyncClientBuilder",
+    "test_method": "testAddInterceptorFirstDoesNotThrow"
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae install -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -DincludeScope=compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "httpclient5",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      }
+    ],
+    "replay_npe": "mvn -V -pl httpclient5 test -Dtest='TestHttpAsyncClientBuilder' -DtrimStackTrace=false -DfailIfNoTests=false",
+    "replay_manual_npe": "mvn -V -pl httpclient5 -P manual-npetest test -Dtest='*ManNPETest' -DtrimStackTrace=false -DfailIfNoTests=false"
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "httpclient5",
+        "class_name": "org.apache.hc.client5.http.impl.async.HttpAsyncClientBuilder"
+      },
+      {
+        "module": "httpclient5",
+        "class_name": "org.apache.hc.client5.http.impl.async.H2AsyncClientBuilder"
+      }
+    ]
+  }
+}

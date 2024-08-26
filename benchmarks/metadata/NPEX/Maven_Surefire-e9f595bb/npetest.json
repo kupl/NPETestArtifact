@@ -1,0 +1,44 @@
+{
+  "npe_info": [
+    {
+      "module": "surefire-providers/common-java5",
+      "npe_class": "org.apache.maven.surefire.report.SmartStackTraceParser",
+      "line": 194
+    }
+  ],
+  "build_info": {
+    "java_version": 15,
+    "mvn_opt_extra": ""
+  },
+  "test_info": {
+    "module": "surefire-providers/common-java5",
+    "test_class": "org.apache.maven.surefire.report.SmartStackTraceParserTest",
+    "test_method": "testNullStackTrace"
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae install -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -DincludeScope=compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "surefire-providers/common-java5",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      }
+    ],
+    "replay_npe": "mvn -V -pl surefire-providers/common-java5 test -Dtest=SmartStackTraceParserTest#testNullStackTrace -DtrimStackTrace=false -DfailIfNoTests=false",
+    "replay_manual_npe": ""
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "surefire-providers/common-java5",
+        "class_name": "org.apache.maven.surefire.report.SmartStackTraceParser"
+      }
+    ]
+  }
+}

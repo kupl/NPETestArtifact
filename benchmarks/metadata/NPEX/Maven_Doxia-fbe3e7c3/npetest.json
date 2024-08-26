@@ -1,0 +1,48 @@
+{
+  "npe_info": [
+    {
+      "module": "doxia-modules/doxia-module-confluence",
+      "npe_class": "org.apache.maven.doxia.module.confluence.parser.AbstractFatherBlock",
+      "line": 72
+    }
+  ],
+  "build_info": {
+    "java_version": 8,
+    "mvn_opt_extra": ""
+  },
+  "test_info": {
+    "module": "doxia-modules/doxia-module-confluence",
+    "test_class": "org.apache.maven.doxia.module.confluence.ConfluenceParserTest",
+    "test_method": "testTable"
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae install -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -DincludeScope=compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      },
+      {
+        "cwd": "doxia-modules/doxia-module-confluence",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip -DskipTests"
+      }
+    ],
+    "replay_npe": "mvn -V -pl doxia-modules/doxia-module-confluence test -Dtest=ConfluenceParserTest#testTable -DtrimStackTrace=false -DfailIfNoTests=false",
+    "replay_manual_npe": "mvn -V -pl doxia-modules/doxia-module-confluence -P manual-npetest test -Dtest='*ManNPETest' -DtrimStackTrace=false -DfailIfNoTests=false -Drat.skip"
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "doxia-modules/doxia-module-confluence",
+        "class_name": "org.apache.maven.doxia.module.confluence.parser.AbstractFatherBlock"
+      },
+      {
+        "module": "doxia-modules/doxia-module-confluence",
+        "class_name": "org.apache.maven.doxia.module.confluence.ConfluenceParser"
+      }
+    ]
+  }
+}

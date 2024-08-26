@@ -1,0 +1,56 @@
+
+set nocompatible
+filetype off
+
+if has("syntax")
+	syntax on
+endif
+
+set nu
+set mouse=a
+set backspace=indent,eol,start
+
+set expandtab
+set tabstop=2
+set shiftwidth=2
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
+
+set laststatus=2
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'preservim/nerdtree'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+Plugin 'majutsushi/tagbar'
+Plugin 'davidhalter/jedi-vim'
+call vundle#end()
+
+filetype plugin indent on
+
+" - nerdtree:
+nmap nerd :NERDTreeToggle<CR>
+
+" - ctags:
+set tags=./tags;
+let g:easytags_async=1
+let g:easytags_auto_highlight=0
+let g:easytags_include_members=1
+let g:easytags_dynamic_files=1
+
+" - tagbar:
+nmap tbr :TagbarToggle<CR>
+
+" - jedi-vim
+let g:jedi#completions_command = "<C-k>"
+let g:jedi#popup_on_dot = 0
+let g:jedi#popup_select_first = 0
+let g:jedi#show_call_signatures = 2
+let g:jedi#auto_vim_configuration = 0
+set completeopt=menuone,longest
+

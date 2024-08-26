@@ -1,0 +1,48 @@
+{
+  "npe_info": [
+    {
+      "module": "modules/activiti-engine",
+      "npe_class": "org.activiti.engine.impl.event.AbstractEventHandler",
+      "line": 46
+    }
+  ],
+  "build_info": {
+    "java_version": 8,
+    "mvn_opt_extra": ""
+  },
+  "test_info": {
+    "module": "modules/activiti-engine",
+    "test_class": "org.activiti.engine.test.bpmn.event.signal.SignalEventTest",
+    "test_method": "testSignalBoundaryOnSubProcess"
+  },
+  "commands": {
+    "build": [
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae install -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip"
+      },
+      {
+        "cwd": "",
+        "cmd": "mvn -V -B -fae dependency:copy-dependencies -DincludeScope=compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip"
+      },
+      {
+        "cwd": "modules/activiti-engine",
+        "cmd": "mvn -V -B -fae compile -Denforcer.skip -Dcheckstyle.skip -Dcobertura.skip -Drat.skip -Dlicense.skip -Dfindbugs.skip -Dgpg.skip -Dskip.npm -Dskip.gulp -Dskip.bower -Drat.numUnapprovedLicenses=100 -Dpmd.skip -Dmaven.javadoc.skip -Danimal.sniffer.skip -Dmaven.test.skip -DskipITs -DfailIfNoTests=false -Darchetype.test.skip"
+      }
+    ],
+    "replay_npe": "mvn -pl modules/activiti-engine test -V -Dtest=SignalEventTest -DtrimStackTrace=false -DfailIfNoTests=false -Dcheckstyle.skip -Dsurefire.useFile=false",
+    "replay_manual_npe": "mvn -pl modules/activiti-engine -P manual-npetest test -Dtest='*ManNPETest' -DtrimStackTrace=false -DfailIfNoTests=false -Dcheckstyle.skip -Dsurefire.useFile=false"
+  },
+  "experiment_config": {
+    "input_classes": [
+      {
+        "module": "modules/activiti-engine",
+        "class_name": "org.activiti.engine.impl.event.AbstractEventHandler"
+      },
+      {
+        "module": "modules/activiti-engine",
+        "class_name": "org.activiti.engine.impl.RuntimeServiceImpl"
+      }
+    ]
+  }
+}
