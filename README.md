@@ -145,6 +145,7 @@ bash -c 'yes | JOB=2 TIME_BUDGET=300 \
   OUTPUT_DIR="~/ase2024/result/npetest/npetest_test" \
   ./run_experiment.sh
 ```
+This command runs NPETest 25 times on all benchmarks built by [experiment](./experiment) process, with a time budget of 5 minutes for each benchmark.
 
 You may change the path for <OUTPUT_DIR>, but the name of parent directory must be "npetest" and the name of the last directory also starts with "npetest_".
 For example, the command can be changed as below:
@@ -158,7 +159,6 @@ bash -c 'yes | JOB=2 TIME_BUDGET=300 \
   OUTPUT_DIR="./result/npetest/npetest_mine" \
   ./run_experiment.sh
 ```
-This command runs NPETest 25 times on all benchmarks built by [experiment](./experiment) process, with a time budget of 5 minutes for each benchmark.
 
 Once all experiments are done, you can make the "result.csv" file which represents the number of NPEs detected by using the following command:
 
