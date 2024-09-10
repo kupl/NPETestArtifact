@@ -5,7 +5,7 @@ All subject programs used in the experiment will be installed in docker images. 
 ## Instructions
 
 ### Download Archive
-Download `subject_gits.tar.gz` from [here](https://drive.google.com/file/d/11I7m6zamJA5UlWmFlChP6eA76DGozBMb/view?usp=drive_link)  and locate here.
+Download `subject_gits.tar.gz` from [here](https://drive.google.com/file/d/11I7m6zamJA5UlWmFlChP6eA76DGozBMb/view?usp=drive_link) or [Zenodo](https://doi.org/10.5281/zenodo.13738493) and locate here.
 We should extract them in the same directory
 ```
 tar zxvf subject_gits.tar.gz
